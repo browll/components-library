@@ -7,7 +7,7 @@
   "include": [
     "src",
     "../utils/scripts"
-  ],
+, "index.ts", "components", "stories", "tokens", "utils"  ],
   "exclude": [
     "node_modules",
     "dist"
