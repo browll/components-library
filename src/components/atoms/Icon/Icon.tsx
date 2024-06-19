@@ -3,6 +3,7 @@
 import createHandlerClick from '../../../utils/createHandlerClicks.util'
 import { iconsMap, mapSize, iconSize } from './constants'
 import './Icon.css'
+import * as React from 'react'
 
 export interface IconProps {
   id?: string

@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 export const iconsMap = {
   arrowUp: {
     viewBox: '-1 -1 19 19',

@@ -1,4 +1,5 @@
 import { Icon } from '../../components/atoms/Icon'
+import * as React from 'react'
 
 export default {
   title: 'Atoms/Icon',

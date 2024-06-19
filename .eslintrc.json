@@ -21,8 +21,7 @@
     "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
-      "tsx": true,
-      "jsx": true
+      "tsx": true
     }
   },
   "plugins": [

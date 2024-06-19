@@ -1,4 +1,5 @@
 import { ButtonIcon } from '../../components/molecules/ButtonIcon'
+import * as React from 'react'
 
 export default {
   title: 'Molecules/ButtonIcon',

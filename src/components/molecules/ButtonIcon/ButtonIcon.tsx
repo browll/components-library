@@ -3,6 +3,7 @@
 import { Button } from '../../atoms/Button'
 import { Icon } from '../../atoms/Icon'
 import { iconsMap } from '../../atoms/Icon/constants'
+import * as React from 'react'
 
 export interface IconProps {
   children?: React.ReactNode
