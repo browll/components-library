@@ -1,4 +1,4 @@
-import { Button } from '../../components/atoms/Button'
+import Button from '../../components/atoms/Button'
 import * as React from 'react'
 
 export default {

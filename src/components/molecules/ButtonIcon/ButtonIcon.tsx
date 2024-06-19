@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
-import { Button } from '../../atoms/Button'
-import { Icon } from '../../atoms/Icon'
+import Button from '../../atoms/Button'
+import Icon from '../../atoms/Icon'
 import { iconsMap } from '../../atoms/Icon/constants'
 import * as React from 'react'
 
