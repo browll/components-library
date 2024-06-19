@@ -1,0 +1,112 @@
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.size-sm {
+    padding: 5px;
+}
+
+.size-md {
+    padding: 8px;
+}
+
+.size-lg {
+    padding: 12px;
+}
+
+.size-xl {
+    padding: 15px;
+}
+
+.color-base path,
+.color-base circle {
+    fill: var(--color-font-base);
+}
+
+.color-base line,
+.color-base rect {
+    stroke: var(--color-font-base);
+}
+
+.color-highlight path,
+.color-highlight circle {
+    fill: var(--color-font-highlight);
+}
+
+.color-highlight line,
+.color-highlight rect {
+    stroke: var(--color-font-highlight);
+}
+
+.color-muted path,
+.color-muted circle {
+    fill: var(--color-font-muted);
+}
+
+.color-muted line,
+.color-muted rect {
+    stroke: var(--color-font-muted);
+}
+
+.color-primary path,
+.color-primary circle {
+    fill: var(--color-primary);
+}
+
+.color-primary line,
+.color-primary rect {
+    stroke: var(--color-primary);
+}
+
+.color-inverted path,
+.color-inverted circle {
+    fill: var(--color-primary-inverted);
+}
+
+.color-inverted line,
+.color-inverted rect {
+    stroke: var(--color-primary-inverted);
+}
+
+.icon rect:global(.transparent) {
+    fill: var(--color-base-transparent) !important;
+}
+
+.background-base {
+    background: var(--color-gray-100);
+    border-radius: var(--border-radius-full);
+}
+
+.background-transparent {
+    background: var(--color-base-transparent);
+}
+
+.background-highlight {
+    background: var(--color-primary-highlight);
+    border-radius: var(--border-radius-full);
+}
+
+.background-muted {
+    background: var(--color-primary-muted);
+    border-radius: var(--border-radius-full);
+}
+
+.background-inverted {
+    border: var(--picture-border);
+    background: var(--color-font-inverted);
+    border-radius: var(--border-radius-full);
+    box-shadow: var(--box-shadow-sm);
+}
+
+.background-spotlight {
+    background: var(--color-yellow-100);
+    border-radius: var(--border-radius-full);
+    box-shadow: var(--box-shadow-sm);
+}
+
+.is-clickable {
+    cursor: pointer;
+}
