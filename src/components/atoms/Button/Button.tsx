@@ -1,22 +1,28 @@
-/* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-unused-vars */
 
 import createHandlerClick from '../../../utils/createHandlerClicks.util'
-import './Heading.css'
+import styles from './Button.module.css'
 import clasNames from 'classnames'
 import * as React from 'react'
 
-export interface HeadingProps {
+export interface ButtonProps {
   children: React.ReactNode
   type?: 'primary' | 'secondary' | 'tertiary'
   onClick?: (e: any) => void
+  isBlock?: boolean
 }
 
-const Heading = ({ children, onClick, type = 'primary' }: HeadingProps) => {
+const Button = ({
+  children,
+  onClick,
+  type = 'primary',
+  isBlock = true,
+}: ButtonProps) => {
   return (
     <button
-      className={clasNames('button', {
-        [`type-${type}`]: type,
+      className={clasNames(styles.button, {
+        [styles[`type-${type}`]]: type,
+        [styles['is-block']]: isBlock && type !== 'tertiary',
       })}
       onClick={onClick && createHandlerClick({ onClick })}
     >
@@ -25,4 +31,4 @@ const Heading = ({ children, onClick, type = 'primary' }: HeadingProps) => {
   )
 }
 
-export default Heading
+export default Button
