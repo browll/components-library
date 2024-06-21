@@ -4,9 +4,9 @@
     "jsx": "react",
     "module": "ESNext",
     "moduleResolution": "node",
-    "declaration": true, 
+    "declaration": true,
     "emitDeclarationOnly": true,
-    "outDir": "dist", 
+    "outDir": "dist",
     "declarationDir": "types",
     "allowJs": true,
     "skipLibCheck": true,
@@ -17,12 +17,9 @@
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false,
+    "noEmit": false
   },
-  "noImplicitAny": true, 
-  "include": ["src/**/*"],
-  "exclude": [
-    "node_modules",
-    "src/stories"
-  ]
+  "noImplicitAny": true,
+  "include": ["src/**/*", "**/*.tsx", "**/*.ts"],
+  "exclude": ["node_modules", "src/stories"]
 }
