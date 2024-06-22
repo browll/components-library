@@ -1,15 +1,42 @@
 import Button from '../../components/atoms/Button'
-import * as React from 'react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
+const options = ['primary', 'secondary', 'tertiary']
+
+const meta: Meta<typeof Button> = {
   title: 'Atoms/Button',
   component: Button,
-  tags: ['autodocs'],
+  tags: ['stable', 'autodocs'],
   argTypes: {
-    type: { control: 'select', options: ['primary', 'secondary', 'tertiary'] },
+    type: {
+      control: 'inline-radio',
+      options: options,
+      description: options.join(' | '),
+    },
+    isBlock: { control: 'boolean' },
   },
 }
 
-export const Primary = () => <Button> Primary </Button>
-export const Secondary = () => <Button type="secondary"> Secondary </Button>
-export const Tertiary = () => <Button type="tertiary"> Button Tertiary </Button>
+export default meta
+type Story = StoryObj<typeof Button>
+
+export const Primary: Story = {
+  args: {
+    type: 'primary',
+    children: 'Primary',
+  },
+}
+
+export const Secondary: Story = {
+  args: {
+    type: 'secondary',
+    children: 'Secondary',
+  },
+}
+
+export const Tertiary: Story = {
+  args: {
+    type: 'tertiary',
+    children: 'Tertiary',
+  },
+}

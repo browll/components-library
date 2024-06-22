@@ -16,7 +16,7 @@
     "lint": "eslint .",
     "test-storybook": "test-storybook",
     "generate:component": "turbo gen react-component",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006 -c .storybook watch-css",
     "build-storybook": "storybook build ",
     "prepare": "husky && husky install",
     "chromatic": "npx chromatic --project-token=chpt_7d635c7cbd6d72b"
