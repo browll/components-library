@@ -14,6 +14,6 @@ exports[`Atoms/Button Secondary smoke-test 1`] = `
 
 exports[`Atoms/Button Tertiary smoke-test 1`] = `
 <button class="_button_bypgm_1 _type-tertiary_bypgm_50">
-  Button Tertiary
+  Tertiary
 </button>
 `;
