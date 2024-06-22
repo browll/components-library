@@ -12,6 +12,6 @@ export default {
 
 export const Default = () => (
   <ButtonIcon type="primary" icon="angleDown">
-    Primary
+    PrimaryS
   </ButtonIcon>
 )
