@@ -19,7 +19,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build ",
     "prepare": "husky && husky install",
-    "chromatic": "npx chromatic --project-token=chpt_7d635c7cbd6d72b"
+    "chromatic": "npx chromatic --project-token=chpt_d9103ecddb14886"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.5.0",
