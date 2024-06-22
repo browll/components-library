@@ -10,6 +10,6 @@ export default {
   },
 }
 
-export const Primary = () => <Button> Seconda </Button>
+export const Primary = () => <Button> Secondary </Button>
 export const Secondary = () => <Button type="secondary"> Secondary </Button>
 export const Tertiary = () => <Button type="tertiary"> Button Tertiary </Button>
