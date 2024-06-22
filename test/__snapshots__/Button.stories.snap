@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/Button Primary smoke-test 1`] = `
+<button class="_button_bypgm_1 _type-primary_bypgm_34 _is-block_bypgm_16">
+  Primary
+</button>
+`;
+
+exports[`Atoms/Button Secondary smoke-test 1`] = `
+<button class="_button_bypgm_1 _type-secondary_bypgm_44 _is-block_bypgm_16">
+  Secondary
+</button>
+`;
+
+exports[`Atoms/Button Tertiary smoke-test 1`] = `
+<button class="_button_bypgm_1 _type-tertiary_bypgm_50">
+  Button Tertiary
+</button>
+`;
