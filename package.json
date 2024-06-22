@@ -7,15 +7,19 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "author": "@bryanarroyave",
+  "author": {
+    "name": "@bryanarroyave"
+  },
   "description": "This library is made by components.",
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint .",
+    "test-storybook": "test-storybook",
     "generate:component": "turbo gen react-component",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build ",
-    "prepare": "husky && husky install"
+    "prepare": "husky && husky install",
+    "chromatic": "npx chromatic --project-token=chpt_7d635c7cbd6d72b"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.5.0",
@@ -30,6 +34,7 @@
     "@storybook/react": "8.1.10",
     "@storybook/react-vite": "8.1.10",
     "@storybook/test": "8.1.10",
+    "@storybook/test-runner": "0.18.2",
     "@turbo/gen": "1.12.4",
     "@types/eslint": "8.56.5",
     "@types/node": "20.11.24",
@@ -38,6 +43,7 @@
     "@typescript-eslint/eslint-plugin": "7.13.1",
     "@typescript-eslint/parser": "7.13.1",
     "autoprefixer": "10.4.19",
+    "chromatic": "11.5.4",
     "classnames": "2.5.1",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
