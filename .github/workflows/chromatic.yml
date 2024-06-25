@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-      - run: npm
+      - run: npm i
       - uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
