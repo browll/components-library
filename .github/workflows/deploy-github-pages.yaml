@@ -51,3 +51,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Get the URL of the deployment
+        run: | 
+          echo "::set-output name=page_url::https://$GITHUB_REPOSITORY.github.io/$GITHUB_RUN_NUMBER" |
+          echo ${{ steps.deployment.outputs.page_url }}

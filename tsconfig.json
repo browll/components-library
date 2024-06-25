@@ -24,6 +24,12 @@
     }
   },
   "noImplicitAny": true,
-  "include": ["src/**/*.tsx", "src/**/*.ts", "lib/**/*.ts", "lib/**/*.tsx", "src/scripts/build-tokens.ts"],
+  "include": [
+    "src/**/*.tsx",
+    "src/**/*.ts",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "src/scripts/build-tokens.ts"
+  ],
   "exclude": ["node_modules", "src/stories"]
 }
