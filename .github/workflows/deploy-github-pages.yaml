@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v3
       - name: install dependencies
         uses: actions/setup-node@v4
         with:
@@ -38,7 +38,7 @@ jobs:
           source: ./storybook-static
           destination: ./_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
 
   # Deployment job
   deploy:
@@ -50,7 +50,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v2
       - name: Get the URL of the deployment
         run: | 
           echo "::set-output name=page_url::https://$GITHUB_REPOSITORY.github.io/$GITHUB_RUN_NUMBER" |
