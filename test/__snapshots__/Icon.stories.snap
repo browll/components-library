@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Atoms/Icon AngleDown smoke-test 1`] = `
-<div id="1"
-     style="width: 35px; height: 35px;"
->
+<div style="width: 35px; height: 35px;">
   <svg viewbox="0 0 15 9"
        xmlns="http://www.w3.org/2000/svg"
        width="35"

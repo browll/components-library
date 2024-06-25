@@ -1,31 +1,36 @@
 {
   "name": "@bryanarroyave/components-library",
-  "version": "0.0.11",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "version": "0.1.1",
+  "private": false,
+  "main": "dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vite-storybook-library.js",
+      "require": "./dist/vite-storybook-library.umd.cjs"
+    }
+  },
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
   "author": {
     "name": "@bryanarroyave"
   },
   "description": "This library is made by components.",
   "scripts": {
-    "build": "rollup -c",
+    "build": "tsc && vite build",
     "lint": "eslint .",
+    "build:tokens": "npx ts-node src/scripts/build-tokens.ts",
     "test-storybook": "test-storybook",
     "generate:component": "turbo gen react-component",
-    "storybook": "storybook dev -p 6006 -c .storybook watch-css",
+    "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build ",
     "prepare": "husky && husky install",
     "chromatic": "npx chromatic --project-token=chpt_7d635c7cbd6d72b"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.5.0",
-    "@rollup/plugin-commonjs": "24.0.1",
-    "@rollup/plugin-node-resolve": "15.2.3",
-    "@rollup/plugin-typescript": "11.0.0",
     "@storybook/addon-essentials": "8.1.10",
     "@storybook/addon-interactions": "8.1.10",
     "@storybook/addon-links": "8.1.10",
@@ -42,6 +47,7 @@
     "@types/react-dom": "18.2.19",
     "@typescript-eslint/eslint-plugin": "7.13.1",
     "@typescript-eslint/parser": "7.13.1",
+    "@vitejs/plugin-react": "4.3.1",
     "autoprefixer": "10.4.19",
     "chromatic": "11.5.4",
     "classnames": "2.5.1",
@@ -53,26 +59,18 @@
     "husky": "9.0.11",
     "lint-staged": "15.2.7",
     "postcss": "8.4.38",
-    "react-dom": "18.2.0",
-    "rollup": "4.18.0",
-    "rollup-plugin-babel": "4.4.0",
-    "rollup-plugin-copy": "3.5.0",
-    "rollup-plugin-dts": "5.1.1",
-    "rollup-plugin-peer-deps-external": "2.2.4",
-    "rollup-plugin-postcss": "4.0.2",
-    "rollup-plugin-typescript2": "0.36.0",
     "semantic-release": "21.0.1",
     "storybook": "8.1.10",
     "tslib": "2.5.0",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "vite-plugin-dts": "3.9.1",
+    "vite-plugin-lib-inject-css": "2.1.1"
   },
   "peerDependencies": {
-    "react": "18.2.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix"
-  },
-  "publishConfig": {
-    "access": "restricted"
   }
 }

@@ -1,8 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Molecules/ButtonIcon Default smoke-test 1`] = `
+exports[`Molecules/ButtonIcon Primary smoke-test 1`] = `
 <button class="_button_bypgm_1 _type-primary_bypgm_34 _is-block_bypgm_16">
   Primary
+  <div style="width: 14px; height: 14px;">
+    <svg viewbox="0 0 15 9"
+         xmlns="http://www.w3.org/2000/svg"
+         width="14"
+         height="14"
+    >
+      <path fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.82633 8.70623L0.882568 1.54063L1.89405 0.496826L7.82633 6.61863L13.7586 0.496826L14.7701 1.54063L7.82633 8.70623Z"
+      >
+      </path>
+    </svg>
+  </div>
+</button>
+`;
+
+exports[`Molecules/ButtonIcon Secondary smoke-test 1`] = `
+<button class="_button_bypgm_1 _type-secondary_bypgm_44 _is-block_bypgm_16">
+  Secondary
+  <div style="width: 14px; height: 14px;">
+    <svg viewbox="0 0 15 9"
+         xmlns="http://www.w3.org/2000/svg"
+         width="14"
+         height="14"
+    >
+      <path fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.82633 8.70623L0.882568 1.54063L1.89405 0.496826L7.82633 6.61863L13.7586 0.496826L14.7701 1.54063L7.82633 8.70623Z"
+      >
+      </path>
+    </svg>
+  </div>
+</button>
+`;
+
+exports[`Molecules/ButtonIcon Tertiary smoke-test 1`] = `
+<button class="_button_bypgm_1 _type-tertiary_bypgm_50">
+  Tertiary
   <div style="width: 14px; height: 14px;">
     <svg viewbox="0 0 15 9"
          xmlns="http://www.w3.org/2000/svg"

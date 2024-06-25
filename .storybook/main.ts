@@ -1,39 +1,44 @@
-import type { StorybookConfig } from "@storybook/react-vite";
+import type { StorybookConfig } from '@storybook/react-vite'
+import react from "@vitejs/plugin-react"
 
-import { join, dirname } from "path";
-
-/**
- * This function is used to resolve the absolute path of a package.
- * It is needed in projects that use Yarn PnP or are set up within a monorepo.
- */
-function getAbsolutePath(value: string): any {
-  return dirname(require.resolve(join(value, "package.json")));
-}
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  staticDirs: ["../src/styles"],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  staticDirs: ['../lib/styles'],
   addons: [
-    getAbsolutePath("@storybook/addon-onboarding"),
-    getAbsolutePath("@storybook/addon-links"),
-    getAbsolutePath("@storybook/addon-essentials"),
-    getAbsolutePath("@chromatic-com/storybook"),
-    getAbsolutePath("@storybook/addon-interactions"),
-    {
-      name: '@storybook/addon-postcss',
-      options: {
-        postcssLoaderOptions: {
-          implementation: require('postcss'),
-        },
-      },
-    }
+    '@storybook/addon-onboarding',
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@chromatic-com/storybook',
+    '@storybook/addon-interactions',
   ],
-
-  docs: {
-    autodocs: 'tag',
+  typescript: {
+    reactDocgen: false,
   },
   framework: {
-    name: getAbsolutePath("@storybook/react-vite"),
+    name: '@storybook/react-vite',
     options: {},
   },
-};
-export default config;
+  core: {
+    builder: '@storybook/builder-vite',
+  },
+  async viteFinal(config, { configType }) {
+    // Merge custom configuration into the default config
+    const { mergeConfig } = await import('vite')
+    if (configType === 'PRODUCTION') {
+      // do something
+    }
+
+    return mergeConfig(config, {
+      copyPublicDir: false,
+      plugins: [react],
+      build: {
+        outDir: 'dist',
+        lib: {
+          entry: '../src/index.ts',
+          formats: ['esm'],
+        },
+      },
+    })
+  },
+}
+export default config

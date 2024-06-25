@@ -1,7 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable no-unused-vars */
 
-import createHandlerClick from '../../../utils/createHandlerClicks.util'
 import clasNames from 'classnames'
 import * as React from 'react'
 
@@ -11,13 +10,12 @@ export interface HeadingProps {
   onClick?: (e: any) => void
 }
 
-const Heading = ({ children, onClick, type = 'primary' }: HeadingProps) => {
+const Heading = ({ children, type = 'primary' }: HeadingProps) => {
   return (
     <button
       className={clasNames('button', {
         [`type-${type}`]: type,
       })}
-      onClick={onClick && createHandlerClick({ onClick })}
     >
       {children}
     </button>

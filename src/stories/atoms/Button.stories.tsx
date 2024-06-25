@@ -1,4 +1,4 @@
-import Button from '../../components/atoms/Button'
+import Button from '../../../lib/components/atoms/Button'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const options = ['primary', 'secondary', 'tertiary']
