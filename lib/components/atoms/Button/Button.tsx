@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-import createHandlerClick from '../../../utils/createHandlerClicks.util'
 import styles from './Button.module.css'
 import clasNames from 'classnames'
 import * as React from 'react'
@@ -14,7 +13,6 @@ export interface ButtonProps {
 
 const Button = ({
   children,
-  onClick,
   type = 'primary',
   isBlock = true,
 }: ButtonProps) => {
@@ -24,7 +22,6 @@ const Button = ({
         [styles[`type-${type}`]]: type,
         [styles['is-block']]: isBlock && type !== 'tertiary',
       })}
-      onClick={onClick && createHandlerClick({ onClick })}
     >
       {children}
     </button>

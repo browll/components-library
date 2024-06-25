@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-import createHandlerClick from '../../../utils/createHandlerClicks.util'
 import { iconsMap, mapSize, iconSize } from './constants'
 import './Icon.css'
 import * as React from 'react'
@@ -12,16 +11,12 @@ export interface IconProps {
   onClick?: (e: any) => void
 }
 
-const Icon = ({ id, size = 'md', name, onClick }: IconProps) => {
+const Icon = ({ id, size = 'md', name }: IconProps) => {
   const icon = name ? iconsMap[name] : ({} as any)
   const mappedSize = mapSize(size)
 
   return (
-    <div
-      id={id}
-      style={{ width: mappedSize, height: mappedSize }}
-      onClick={onClick && createHandlerClick({ onClick })}
-    >
+    <div id={id} style={{ width: mappedSize, height: mappedSize }}>
       <svg
         viewBox={icon.viewBox}
         xmlns="http://www.w3.org/2000/svg"

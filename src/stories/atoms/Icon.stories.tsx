@@ -1,13 +1,26 @@
-import Icon from '../../components/atoms/Icon'
-import * as React from 'react'
+import Icon from '../../../lib/components/atoms/Icon'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
+const options = ['xs', 'sm', 'md', 'lg', 'xl']
+
+const meta: Meta<typeof Icon> = {
   title: 'Atoms/Icon',
   component: Icon,
-  tags: ['autodocs'],
+  tags: ['stable', 'autodocs'],
   argTypes: {
-    type: { control: 'select', options: ['primary', 'secondary', 'tertiary'] },
+    size: {
+      control: 'inline-radio',
+      options: options,
+      description: options.join(' | '),
+    },
   },
 }
 
-export const AngleDown = () => <Icon id="1" name="angleDown" />
+export default meta
+type Story = StoryObj<typeof Icon>
+
+export const AngleDown: Story = {
+  args: {
+    name: 'angleDown',
+  },
+}
